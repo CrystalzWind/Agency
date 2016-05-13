@@ -1,0 +1,94 @@
+// Background Features
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+//Placeholder
+
+.placeholder() {
+     ::-webkit-input-placeholder {
+         font-family: @robo;
+         font-weight: 900;
+         text-transform: uppercase;
+         color: @placeholder-text;
+    }
+    :-moz-placeholder {
+         font-family: @robo;
+         font-weight: 900;
+        text-transform: uppercase;
+         color: @placeholder-text;
+    }
+    ::-moz-placeholder {
+        font-family: @robo;
+         font-weight: 900;
+        text-transform: uppercase;
+        color: @placeholder-text;
+    }
+    :-ms-input-placeholder {
+        font-family: @robo;
+         font-weight: 900;
+        text-transform: uppercase;
+        color: @placeholder-text;
+    }
+}
+
+//Border Radius
+
+.border-radius (@radius: 1px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+// Button variants
+
+.button(@color; @background; @padding-vertical; @padding-horizontal; @border-radius) {
+  color: @color;
+  background-color: @background;
+    
+    &:hover,
+    &:active,
+    &:focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+  }
+  padding: @padding-vertical @padding-horizontal;
+  .border-radius(@border-radius);
+}
+
+// Transition
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+
+.box-shadow (@box-shadow) {
+	-webkit-box-shadow: @box-shadow;
+	-moz-box-shadow:    @box-shadow;
+	box-shadow:         @box-shadow;
+}
+
+
+// Font Selections
+
+.font(@font; @font-size: 1em; @line-height: normal; @font-weight: normal; @font-style: normal) {
+    font-family: @font;
+    font-size: @font-size;
+    line-height: @line-height;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
+@indie: 'Indie Flower', cursive;
+@montserrat: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@droid: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@robo: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@kaushan: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
